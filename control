@@ -1,0 +1,9 @@
+Package: com.dgh0st.sctextsection
+Name: SCTextSection
+Depends: mobilesubstrate, preferenceloader, com.dgh0st.switchercontrols | com.bigboss.switchercontrols
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Add custom text as one of the sections for SwitcherControls.
+Maintainer: DGh0st <deeppwnage@yahoo.com>
+Author: DGh0st <deeppwnage@yahoo.com>
+Section: Tweaks
