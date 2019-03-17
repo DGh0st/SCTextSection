@@ -1,5 +1,5 @@
 export ARCHS = armv7 arm64
-export TARGEt = iphone:clang:latest:latest
+export TARGET = iphone:clang:9.3:latest
 
 PACKAGE_VERSION = 0.0.1
 

@@ -1,4 +1,4 @@
-#include "SCTRootListController.h"
+#import "SCTRootListController.h"
 
 #define kSettingsPath @"/var/mobile/Library/Preferences/com.dgh0st.sctextsection.plist"
 

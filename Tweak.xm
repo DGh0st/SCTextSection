@@ -1,4 +1,4 @@
-#import <Preferences/Preferences.h>
+#import <Preferences/PSViewController.h>
 
 #define identifier @"com.dgh0st.sctextsection"
 #define kSettingsPath @"/var/mobile/Library/Preferences/com.dgh0st.sctextsection.plist"
@@ -41,17 +41,19 @@ static void preferencesChanged() {
 			CFRelease(keyList);
 		}
 	} else {
-		prefs = [NSDictionary dictionaryWithContentsOfFile:kSettingsPath];
+		prefs = [[NSDictionary alloc] initWithContentsOfFile:kSettingsPath];
 	}
 
 	NSString *text = [prefs objectForKey:@"customText"] ?: @"Please change the text displayed here through the settings";
 	for (UILabel *label in texts)
 		label.text = text;
+
+	[prefs release];
 }
 
 @implementation SCCustomTextSection
-// height will always be 64 (but changing the frame's height inside initWithFrame will change the height)
-// width will be either same as width of screen (orientation dependent) or width of screen - 40 (unchangeable)
+// height will always be 64
+// width will be either same as width of screen (orientation dependent) or width of screen - 40
 -(id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
 	if (self != nil) {
